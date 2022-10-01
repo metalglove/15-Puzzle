@@ -65,7 +65,8 @@ internal class Program
         var diff = EndingTime.Subtract(StartTime);
         var res = string.Format("Hours: {0} Minutes: {1} Seconds: {2} Milliseconds: {3}", diff.Hours, diff.Minutes, diff.Seconds, diff.Milliseconds);
         Console.WriteLine(res);
-        Console.WriteLine("Puzzle solved. Moves: " + directions.Count);
+        Console.WriteLine("Puzzle solved. ");
+        Console.WriteLine($"{directions.Count} Moves:");
         foreach (Direction Direction in directions)
         {
             Console.Write(Direction + " ");

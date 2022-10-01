@@ -19,15 +19,14 @@ namespace SlidingPuzzle.PatternDatabase
             {
                 board[index] = index;
             }
-            Console.WriteLine("Board:" + string.Join(",", board));
             int whitePuzzlePiece = board.Length - 1;
             board[whitePuzzlePiece] = whitePuzzlePiece;
+            Console.WriteLine("Board:" + string.Join(",", board));
             PatternState = board;
             Pattern = pattern;
             PuzzleSize = puzzleSize;
             MovablePiece = (PuzzleSize * PuzzleSize) - 1;
             ClosedSet = new Dictionary<string, int>();
-            Console.WriteLine(string.Join(",", PatternState));
         }
 
         public string Hash(int[] puzzleState)
