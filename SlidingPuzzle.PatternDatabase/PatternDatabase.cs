@@ -131,7 +131,6 @@ namespace SlidingPuzzle.PatternDatabase
             foreach (PatternBoard pattern in Patterns)
             {
                 string hashed = pattern.Hash(puzzleState);
-                //if (pattern.ClosedSet.TryGetValue(hashed.GetHashCode(), out int h))
                 if (pattern.ClosedSet.TryGetValue(hashed, out int h))
                         heuristic += h;
             }
